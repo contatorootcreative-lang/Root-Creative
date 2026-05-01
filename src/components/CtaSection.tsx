@@ -3,6 +3,7 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const whatsappUrl = "whatsapp://send?phone=5564992313619&text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Root%20Creative%20e%20quero%20falar%20com%20voc%C3%AAs.";
+const portfolioUrl = "https://drive.google.com/drive/folders/1pu8ftjLuNnVxm_7Sn_ruCEizymipPU2m?usp=sharing";
 
 const CtaSection = () => (
   <section id="contato" className="section-padding">
@@ -21,11 +22,15 @@ const CtaSection = () => (
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button asChild size="lg" className="gap-2 bg-forest text-cream hover:bg-forest/90">
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-            Solicitar proposta <ArrowRight size={18} />
+          <a href={portfolioUrl} target="_blank" rel="noopener noreferrer">
+            Ver portfólio completo <ArrowRight size={18} />
           </a>
         </Button>
-        <Button asChild size="lg" variant="outline" className="gap-2 border-forest/30 text-forest hover:bg-forest/10">
+        <Button
+          asChild
+          size="lg"
+          className="gap-2 bg-transparent text-forest border border-forest/40 hover:bg-forest/10"
+        >
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
             <MessageCircle size={18} /> Falar no WhatsApp
           </a>
