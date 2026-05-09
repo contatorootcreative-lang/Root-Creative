@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -13,7 +14,14 @@ const projects = [
     image: p1,
     slug: "fotos",
   },
-  // 🔁 Adicione os próximos projetos aqui (Storymaker, Vídeos, etc.)
+  {
+    title: "Cobertura de Eventos",
+    client: "Root Creative",
+    category: "Fotografia",
+    image: p2,
+    slug: "cobertura",
+  },
+  // 🔁 Adicione os próximos projetos aqui
 ];
 
 const Portfolio = () => {

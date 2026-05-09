@@ -2,12 +2,14 @@ import { motion } from "framer-motion";
 import { Share2, Target, BarChart3, Palette, Video, Camera } from "lucide-react";
 
 const services = [
-  { icon: Share2, title: "Gestão de Redes Sociais", desc: "Planejamento, criação de conteúdo e gerenciamento completo das suas redes." },
-  { icon: Target, title: "Construção de Posicionamento", desc: "Estratégia de marca para você se destacar no mercado e na mente do público." },
-  { icon: BarChart3, title: "Tráfego Pago & Análise de Dados", desc: "Campanhas otimizadas e dashboards para decisões baseadas em dados reais." },
-  { icon: Palette, title: "Criação de Identidade Visual", desc: "Logo, tipografia, paleta de cores e manual de marca únicos para o seu negócio." },
-  { icon: Video, title: "Produção Audiovisual", desc: "Vídeos institucionais, reels, motion graphics e conteúdo que engaja." },
-  { icon: Camera, title: "Fotografia & Cobertura de Eventos", desc: "Fotos profissionais que capturam a essência da sua marca e momentos." },
+  { icon: Share2, title: "Social Media", desc: "Gerenciamento de redes sociais com criação de conteúdo, desing e estratégia de perfomance" },
+  { icon: Target, title: "Fotografia", desc: "Ensaios, registro de momentos é posicionamento de marca" },
+  { icon: BarChart3, title: "Tráfego pago", desc: " Estratégia e análise de dados" },
+  { icon: Palette, title: "Audiovisual ", desc: " Criação de post e criativos" },
+  { icon: Video, title: "Desing", desc: "Criação de post e criativos" },
+  { icon: Video, title: "Storymaker ", desc: "Cobertura em tempo de real móbile" },
+  { icon: Camera, title: "Cobertura de eventos", desc: "registro de eventos, casamentos e momentos" },
+  { icon: Video, title: "Lading page", desc: "Criação de páginas de destino eficientes" },
 ];
 
 const Services = () => (

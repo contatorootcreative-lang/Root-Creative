@@ -6,11 +6,15 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ProjectPage from "./components/Projectpage.tsx";
+import CoberturaPage from "./components/Coberturapage.tsx";
 
 const queryClient = new QueryClient();
 
 const PortfolioRoute = () => {
   const { slug } = useParams();
+
+  if (slug === "cobertura") return <CoberturaPage slug={slug} />;
+
   return <ProjectPage slug={slug ?? ""} />;
 };
 

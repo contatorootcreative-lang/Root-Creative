@@ -4,24 +4,23 @@ import { ArrowLeft, X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-re
 import { motion, AnimatePresence } from "framer-motion";
 import RootLogo from "./RootLogo";
 
-import foto1 from "./fotos-porfiolhos/114-DSC00154.jpg";
-import foto2 from "./fotos-porfiolhos/Cópia de 1-DSC06602.jpg";
-import foto3 from "./fotos-porfiolhos/Cópia de 1.png";
-import foto4 from "./fotos-porfiolhos/Cópia de 26-DSC06567.jpg";
-import foto5 from "./fotos-porfiolhos/Cópia de 5-DSC06598 (1).jpg";
-import foto6 from "./fotos-porfiolhos/Cópia de 5-DSC06598.jpg";
-import foto7 from "./fotos-porfiolhos/Cópia de 7.png";
-import foto8 from "./fotos-porfiolhos/Cópia de 85-DSC05606.jpg";
-import foto9 from "./fotos-porfiolhos/Cópia de DSC02797.jpg";
-import foto10 from "./fotos-porfiolhos/Cópia de DSC02921.jpg";
-import foto11 from "./fotos-porfiolhos/IMG_3273.JPG (1).jpeg";
-
+import foto1 from "./cobertura-fotos/1-DSC00074.jpg";
+import foto2 from "./cobertura-fotos/7-DSC00150.jpg";
+import foto3 from "./cobertura-fotos/48-DSC00307.jpg";
+import foto4 from "./cobertura-fotos/53-DSC00323.jpg";
+import foto5 from "./cobertura-fotos/57-DSC00343.jpg";
+import foto6 from "./cobertura-fotos/69-DSC00410.jpg";
+import foto7 from "./cobertura-fotos/79-DSC00450.jpg";
+import foto8 from "./cobertura-fotos/107-DSC00734.jpg";
+import foto9 from "./cobertura-fotos/108-DSC00736.jpg";
+import foto10 from "./cobertura-fotos/111-DSC00767.jpg";
+import foto11 from "./cobertura-fotos/139-DSC01149.jpg";
 
 const fotos = [foto1, foto2, foto3, foto4, foto5, foto6, foto7, foto8, foto9, foto10, foto11];
 
-const driveUrl = "https://drive.google.com/drive/folders/1HmaLTuXPUT8rjgTmOnPG_V0InK2sH5KI";
+const driveUrl = "https://drive.google.com/drive/folders/1wB_S2_5v2mAHZ5jaXfmzjLzFBmB-nAey";
 
-const ProjectPage = ({ slug }: { slug: string }) => {
+const CoberturaPage = ({ slug }: { slug: string }) => {
     const navigate = useNavigate();
     const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
@@ -32,7 +31,6 @@ const ProjectPage = ({ slug }: { slug: string }) => {
 
     return (
         <div className="min-h-screen bg-background flex flex-col">
-
 
             <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/30">
                 <div className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
@@ -62,7 +60,7 @@ const ProjectPage = ({ slug }: { slug: string }) => {
                 className="max-w-7xl mx-auto px-6 md:px-12 py-10 md:py-14 w-full"
             >
                 <span className="text-primary text-sm font-medium mb-2 block">Portfólio</span>
-                <h1 className="text-4xl md:text-6xl font-display font-bold mb-3">Fotografia</h1>
+                <h1 className="text-4xl md:text-6xl font-display font-bold mb-3">Cobertura de Eventos</h1>
                 <p className="text-muted-foreground text-lg max-w-xl">
                     Ensaios e coberturas que capturam a essência de cada marca.
                 </p>
@@ -70,30 +68,29 @@ const ProjectPage = ({ slug }: { slug: string }) => {
 
             <div className="w-full border-t border-border/30" />
 
-
             <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 w-full">
-                <div className="columns-2 md:columns-3 gap-4 space-y-4">
+                <div className="columns-1 sm:columns-2 md:columns-3" style={{ columnGap: "1.5rem" }}>
                     {fotos.map((src, i) => (
                         <motion.div
                             key={i}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 24 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.4, delay: i * 0.06 }}
+                            transition={{ duration: 0.5, delay: i * 0.07 }}
                             onClick={() => openLightbox(i)}
-                            className="break-inside-avoid overflow-hidden rounded-2xl cursor-pointer group relative mb-4"
+                            className="break-inside-avoid overflow-hidden rounded-3xl cursor-pointer group relative mb-6"
+                            style={{ display: "inline-block", width: "100%" }}
                         >
                             <img
                                 src={src}
-                                alt={`Foto ${i + 1}`}
+                                alt={`Cobertura ${i + 1}`}
                                 loading="lazy"
-                                className="w-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                className="w-full object-cover group-hover:scale-105 transition-transform duration-700 rounded-3xl"
                             />
-                            <div className="absolute inset-0 bg-background/0 group-hover:bg-background/20 transition-colors duration-300 rounded-2xl" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
                         </motion.div>
                     ))}
                 </div>
             </div>
-
 
             <footer className="border-t border-border/30 px-6 md:px-12 py-6 mt-auto">
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -108,7 +105,6 @@ const ProjectPage = ({ slug }: { slug: string }) => {
                     </button>
                 </div>
             </footer>
-
 
             <AnimatePresence>
                 {lightboxIndex !== null && (
@@ -140,7 +136,7 @@ const ProjectPage = ({ slug }: { slug: string }) => {
                             exit={{ opacity: 0, scale: 0.95 }}
                             transition={{ duration: 0.25 }}
                             src={fotos[lightboxIndex]}
-                            alt={`Foto ${lightboxIndex + 1}`}
+                            alt={`Cobertura ${lightboxIndex + 1}`}
                             onClick={(e) => e.stopPropagation()}
                             className="max-h-[85vh] max-w-[90vw] object-contain rounded-2xl shadow-2xl"
                         />
@@ -162,4 +158,4 @@ const ProjectPage = ({ slug }: { slug: string }) => {
     );
 };
 
-export default ProjectPage;
+export default CoberturaPage;
